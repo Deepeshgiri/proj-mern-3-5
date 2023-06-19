@@ -5,6 +5,7 @@ import morgan from "morgan";
 import connectDb from "./config/config.js";
 import router from "./routes/authRoute.js";
 import cors from 'cors' // import cors
+import categoryRoutes from './routes/categoryRoute.js'
 
 const app = express();
 // configure env
@@ -20,6 +21,7 @@ app.use(cors());
 
 //routes
 app.use('/api/v1/auth',router)
+app.use('/api/v1/category',categoryRoutes)
 
 //PORT
 const PORT = process.env.PORT || 8800;
