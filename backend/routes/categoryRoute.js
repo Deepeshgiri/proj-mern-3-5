@@ -11,10 +11,10 @@ import {
 const router = express.Router();
 // routes
 // create category
-router.post("/create-category", requireSignIn, createCategoryController);
+router.post("/create-category", createCategoryController);
 
 // update category
-router.put("/update-category/:id", requireSignIn, updateCategoryController);
+router.put("/update-category/:id",updateCategoryController);
 
 // getAll categories
 router.get("/get-category", categoryController);
